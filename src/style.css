@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Inter", sans-serif;
+  color: #1D2130;
+}
+
+.home-banner {
+  background: url(./assets/png/hero.jpg), rgba(0, 0, 0, 0.9);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.home-banner-2 {
+  background: url(./assets/png/banner.jpg), rgba(0, 0, 0, 0.9);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.app-width {
+  @apply max-w-[1440px] mx-auto px-5 lg:px-12;
+}
