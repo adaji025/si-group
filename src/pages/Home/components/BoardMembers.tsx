@@ -60,7 +60,7 @@ const BoardMembers = () => {
   }, []);
 
   return (
-    <div className="app-width grid sm:grid-cols-2 md:grid-cols-4 gap-10 mt-20" data-aos="fade-up">
+    <div className="app-width grid sm:grid-cols-2 md:grid-cols-4 gap-10 mt-12" data-aos="fade-up">
       {data.map((item, index) => (
         <Board item={item} key={index} />
       ))}

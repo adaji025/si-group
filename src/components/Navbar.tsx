@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import styles from "./Navbar.module.css";
+import { HashLink } from "react-router-hash-link";
 
 const navMenuItems = [
   {
@@ -14,15 +15,15 @@ const navMenuItems = [
   },
   {
     title: "Our Subsidiaries",
-    url: "/Become-a-tutor",
+    url: "#subsidiaries",
   },
   {
     title: "The Board",
-    url: "/contact-us",
+    url: "#board",
   },
   {
     title: "Contact Us",
-    url: "/learn-more",
+    url: "#learn_more",
   },
 ];
 
@@ -51,20 +52,22 @@ const Navbar = () => {
           }`}
         >
           {navMenuItems.map((menu, idx) => (
-            <div
-              key={idx}
-              className={`flex gap-2 items-center relative font-semibold border-b-4 border-transparent text-base md:text-lg cursor-pointer hover:border-pink hover:lg:text-primary-green-50 hover:lg:border-primary-green-50   transition- duration-200 ${
-                router.pathname === menu.url
-                  ? "lg:border-pink lg:text-primary-green-50"
-                  : ""
-              } `}
-              onClick={() => {
-                navigate(menu.url);
-                setMenu(false);
-              }}
-            >
-              {menu.title}
-            </div>
+            <HashLink to={menu.url}>
+              <div
+                key={idx}
+                className={`flex gap-2 items-center relative font-semibold border-b-4 border-transparent text-base md:text-lg cursor-pointer hover:border-pink hover:lg:text-primary-green-50 hover:lg:border-primary-green-50   transition- duration-200 ${
+                  router.pathname === menu.url
+                    ? "lg:border-pink lg:text-primary-green-50"
+                    : ""
+                } `}
+                onClick={() => {
+                  navigate(menu.url);
+                  setMenu(false);
+                }}
+              >
+                {menu.title}
+              </div>
+            </HashLink>
           ))}
         </div>
       </nav>

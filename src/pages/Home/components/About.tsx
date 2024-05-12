@@ -35,7 +35,7 @@ const About = () => {
     },
   ];
   return (
-    <div className="bg-[#F7F8FA] py-20" data-aos="fade-up">
+    <div id="about" className="bg-[#F7F8FA] py-20" data-aos="fade-up mt-[70px]">
       <div className="app-width flex flex-col md:flex-row justify-between items-center gap-20">
         <div className="flex-1">
           <div className="bg-[#92CD0033]/20 px-2 py-3 rounded w-max text-xs text-[#2C6700] font-medium">

@@ -42,12 +42,24 @@ const Home = () => {
       </div>
       <Partners />
       <About />
-      <Subsidiaries />
-      <WomenCommunity />
-      <Magazine />
-      <BeyoundMentors />
-      <Tatsuniyya />
-      <BoardMembers />
+      <div id="subsidiaries" className="mt-[70px]">
+        <Subsidiaries />
+        <WomenCommunity />
+        <Magazine />
+        <BeyoundMentors />
+        <Tatsuniyya />
+      </div>
+      <div id="board" className="mt-44">
+        <div className="flex flex-col items-center text-center">
+          <div className="bg-[#92CD0033]/20 px-2 py-3 rounded w-max text-xs text-[#2C6700] font-medium">
+            Behind SI GROUP
+          </div>
+          <h2 className="font-bold text-[32px] lg:text-[48px]">
+            Meet the Board
+          </h2>
+        </div>
+        <BoardMembers />
+      </div>
       <BottomBanner />
       <Footer />
     </Fragment>
