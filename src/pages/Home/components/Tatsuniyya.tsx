@@ -1,9 +1,18 @@
 import { Button } from "@mantine/core";
 import SubsidiaryImage from "../../../assets/png/tatsuniyya.png";
+import { useEffect } from "react";
+import Aos from "aos";
 
 const Tatsuniyya = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
+
   return (
-    <div className="app-width flex flex-col md:flex-row justify-between items-center gap-20 mt-20">
+    <div
+      className="app-width flex flex-col md:flex-row justify-between items-center gap-20 mt-20"
+      data-aos="fade-up"
+    >
       <div className="flex-1">
         <h2 className="font-bold text-[32px] lg:text-[48px] lg:w-1/2">
           Tattsuniyya Network{" "}
@@ -15,7 +24,7 @@ const Tatsuniyya = () => {
           passed down through generations, and the social and cultural values
           that form the bedrock of our society.
         </div>
-        <Button size="md" className="bg-black mt-5">
+        <Button size="md" className="bg-black mt-5 hover:bg-black hover:scale-105 duration-300">
           Visit our website
         </Button>
       </div>

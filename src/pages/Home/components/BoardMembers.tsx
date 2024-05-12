@@ -5,6 +5,8 @@ import Rafiu from "../../../assets/png/rafiu.png";
 import { FaFacebook } from "react-icons/fa6";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa6";
+import { useEffect } from "react";
+import Aos from "aos";
 
 const data = [
   {
@@ -53,8 +55,12 @@ const Board = ({ item }: IProps) => {
 };
 
 const BoardMembers = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
+
   return (
-    <div className="app-width grid sm:grid-cols-2 md:grid-cols-4 gap-10 mt-20">
+    <div className="app-width grid sm:grid-cols-2 md:grid-cols-4 gap-10 mt-20" data-aos="fade-up">
       {data.map((item, index) => (
         <Board item={item} key={index} />
       ))}

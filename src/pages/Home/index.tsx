@@ -10,14 +10,24 @@ import Tatsuniyya from "./components/Tatsuniyya";
 import BoardMembers from "./components/BoardMembers";
 import BottomBanner from "./components/BottomBanner";
 import Footer from "../../components/Footer";
+import AOS from "aos";
+
+import { useEffect } from "react";
 
 const Home = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <Fragment>
       <Navbar />
       <div className="home-banner min-h-[70vh] md:min-h-screen flex items-center mt-[60px]">
         <div className="flex justify-start">
-          <div className="max-w-[700px] px-5 lg:px-12 text-white z-10">
+          <div
+            className="max-w-[700px] px-5 lg:px-12 text-white z-10"
+            data-aos="zoom-in"
+          >
             <h2 className="font-bold text-[32px] md:text-[44px] lg:text-[64px] text-start">
               Advancing Humanity in Every Human
             </h2>

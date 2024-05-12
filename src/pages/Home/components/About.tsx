@@ -1,8 +1,13 @@
 import { Accordion, Button } from "@mantine/core";
 import Ellipse1 from "../../../assets/svg/ellipse.svg";
 import Ellipse2 from "../../../assets/svg/ellipse-2.svg";
+import { useEffect } from "react";
+import Aos from "aos";
 
 const About = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
   const groceries = [
     {
       emoji: Ellipse1,
@@ -30,7 +35,7 @@ const About = () => {
     },
   ];
   return (
-    <div className="bg-[#F7F8FA] py-20">
+    <div className="bg-[#F7F8FA] py-20" data-aos="fade-up">
       <div className="app-width flex flex-col md:flex-row justify-between items-center gap-20">
         <div className="flex-1">
           <div className="bg-[#92CD0033]/20 px-2 py-3 rounded w-max text-xs text-[#2C6700] font-medium">
@@ -45,7 +50,7 @@ const About = () => {
             social, economic and educational development; counselling and
             mentoring of rural and urban communities in Northern Nigeria..
           </div>
-          <Button size="md" className="bg-black mt-5">
+          <Button size="md" className="bg-black mt-5 hover:bg-black hover:scale-105 duration-300">
             Visit our website
           </Button>
         </div>

@@ -1,9 +1,18 @@
 import { Button } from "@mantine/core";
 import SubsidiaryImage from "../../../assets/png/wc.png";
+import { useEffect } from "react";
+import Aos from "aos";
 
 const WomenCommunity = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
+
   return (
-    <div className="app-width flex flex-col md:flex-row justify-between items-center gap-20 mt-20">
+    <div
+      className="app-width flex flex-col md:flex-row justify-between items-center gap-20 mt-20"
+      data-aos="fade-up"
+    >
       <div className="flex-1 order-2 md:order-1">
         <img src={SubsidiaryImage} alt="" />
       </div>
@@ -21,7 +30,10 @@ const WomenCommunity = () => {
           and affect the sustainable development of the African women and
           children. Championing the needs of women, youth, and girls.
         </div>
-        <Button size="md" className="bg-black mt-5">
+        <Button
+          size="md"
+          className="bg-black mt-5 hover:bg-black hover:scale-105 duration-300"
+        >
           Visit our website
         </Button>
       </div>
