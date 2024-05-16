@@ -38,8 +38,8 @@ const About = () => {
     <div id="about" className="bg-[#F7F8FA] py-20" data-aos="fade-up mt-[70px]">
       <div className="app-width flex flex-col md:flex-row justify-between items-center gap-20">
         <div className="flex-1">
-          <div className="bg-[#92CD0033]/20 px-2 py-3 rounded w-max text-xs text-[#2C6700] font-medium">
-            Our Subsidiaries
+          <div className="bg-[#92CD0033]/20 px-4 py-3 rounded w-max text-xs text-[#2C6700] font-medium">
+            About Us
           </div>
           <h2 className="font-bold text-[32px] lg:text-[48px]">
             Beyond Mentors Community Care Initiatives (BMCCI)
@@ -50,7 +50,10 @@ const About = () => {
             social, economic and educational development; counselling and
             mentoring of rural and urban communities in Northern Nigeria..
           </div>
-          <Button size="md" className="bg-black mt-5 hover:bg-black hover:scale-105 duration-300">
+          <Button
+            size="md"
+            className="bg-black mt-5 hover:bg-black hover:scale-105 duration-300"
+          >
             Visit our website
           </Button>
         </div>
@@ -65,7 +68,7 @@ const About = () => {
                 <Accordion.Control>
                   <div className="flex items-center gap-2">
                     <img src={item.emoji} alt="" />
-                    
+
                     {item.value}
                   </div>
                 </Accordion.Control>

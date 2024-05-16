@@ -3,7 +3,7 @@ import SubsidiaryImage from "../../../assets/png/subsidiary.png";
 import { useEffect } from "react";
 import Aos from "aos";
 
-const Subsidiaries = () => {
+const BMCCI = () => {
   useEffect(() => {
     Aos.init();
   }, []);
@@ -14,9 +14,9 @@ const Subsidiaries = () => {
       data-aos="fade-up"
     >
       <div className="flex-1">
-        <div className="bg-[#92CD0033]/20 px-2 py-3 rounded w-max text-xs text-[#2C6700] font-medium">
+        {/* <div className="bg-[#92CD0033]/20 px-2 py-3 rounded w-max text-xs text-[#2C6700] font-medium">
           Our Subsidiaries
-        </div>
+        </div> */}
         <h2 className="font-bold text-[32px] lg:text-[48px]">
           Beyond Mentors Community Care Initiatives (BMCCI)
         </h2>
@@ -37,4 +37,4 @@ const Subsidiaries = () => {
   );
 };
 
-export default Subsidiaries;
+export default BMCCI;

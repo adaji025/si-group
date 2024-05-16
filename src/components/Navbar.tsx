@@ -52,7 +52,7 @@ const Navbar = () => {
           }`}
         >
           {navMenuItems.map((menu, idx) => (
-            <HashLink to={menu.url}>
+            <HashLink smooth to={menu.url}>
               <div
                 key={idx}
                 className={`flex gap-2 items-center relative font-semibold border-b-4 border-transparent text-base md:text-lg cursor-pointer hover:border-pink hover:lg:text-primary-green-50 hover:lg:border-primary-green-50   transition- duration-200 ${

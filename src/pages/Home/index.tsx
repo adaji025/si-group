@@ -1,7 +1,6 @@
 import { Fragment } from "react/jsx-runtime";
 import Navbar from "../../components/Navbar";
 import Partners from "./components/Partners";
-import Subsidiaries from "./components/Subsidiaries";
 import About from "./components/About";
 import WomenCommunity from "./components/WomenCommunity";
 import Magazine from "./components/Magazine";
@@ -13,6 +12,7 @@ import Footer from "../../components/Footer";
 import AOS from "aos";
 
 import { useEffect } from "react";
+import BMCCI from "./components/BMCCI";
 
 const Home = () => {
   useEffect(() => {
@@ -42,11 +42,11 @@ const Home = () => {
       </div>
       <Partners />
       <About />
+      <BeyoundMentors />
       <div id="subsidiaries" className="mt-[70px]">
-        <Subsidiaries />
+        <BMCCI />
         <WomenCommunity />
         <Magazine />
-        <BeyoundMentors />
         <Tatsuniyya />
       </div>
       <div id="board" className="mt-44">

@@ -17,9 +17,9 @@ const WomenCommunity = () => {
         <img src={SubsidiaryImage} alt="" />
       </div>
       <div className="flex-1  order-1 md:order-2">
-        <div className="bg-[#92CD0033]/20 px-2 py-3 rounded w-max text-xs text-[#2C6700] font-medium">
+        {/* <div className="bg-[#92CD0033]/20 px-2 py-3 rounded w-max text-xs text-[#2C6700] font-medium">
           Our Subsidiaries
-        </div>
+        </div> */}
         <h2 className="font-bold text-[32px] lg:text-[48px]">
           Women Community in Africa (WCA)
         </h2>
